@@ -15,7 +15,7 @@ For this script to be regonized as an internal command, execute the following co
 git clone https://github.com/mikeshootzz/translate-scipt.git
 ```
 ```
-mv translate-scipt/funtranslate.sh /usr/local/bin/funtranslate
+sudo mv translate-scipt/funtranslate.sh /usr/local/bin/funtranslate
 ```
 ```
 sudo chmod +x /usr/local/bin/funtranslate 
