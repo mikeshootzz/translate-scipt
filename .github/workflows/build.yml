@@ -1,0 +1,20 @@
+name: Docker Build
+
+on:
+  push:
+   branches: [ docker ]
+  pull_request:
+    branches: [ docker ]
+      
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build & Push Image
+      run: |
+        echo "${{ secrets.DOCKERPW }}" | docker login -u "dockermike1809" --password-stdin
+        docker image build -t dockermike1809/translate:latest .
+        docker push dockermike1809/translate:latest
